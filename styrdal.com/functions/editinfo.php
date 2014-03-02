@@ -14,10 +14,36 @@ function editinfo()
 			$url = "http://" . $url;
 		}
 		
+		if(isset($_POST["istandard"]) && $_POST["istandard"] == "true")
+		{
+			$standard = "true";
+		}
+		else
+		{
+			$standard = "false";
+		}
+		if(isset($_POST["idaily"]) && $_POST["idaily"] == "true")
+		{
+			$daily = "true";
+		}
+		else 
+		{
+			$daily = "false";
+		}
+		
+		
 		$extra = $_POST["iextra"];
 		$idname = $_POST["idname"];
 		
-		$infosql = "UPDATE restaurants SET name = '" . $name ."', address = '" . $address ."', number = '" . $number . "', url = '" . $url . "', extra = '" . $extra . "' WHERE idname = '" . $idname . "'";
+		$infosql = "UPDATE restaurants SET 
+			name = '" . $name ."', 
+			address = '" . $address ."', 
+			number = '" . $number . "', 
+			url = '" . $url . "', 
+			extra = '" . $extra . "', 
+			standard = '" . $standard . "', 
+			daily = '" . $daily . "'
+			WHERE idname = '" . $idname . "'";
 		$inforesult = $sqlitecon->query($infosql);
 		echo "Information uppdaterad!<br />";
 	}

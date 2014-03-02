@@ -86,7 +86,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='mondayopenminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $mondayopenminute)
 	{
@@ -114,7 +114,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='mondaycloseminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $mondaycloseminute)
 	{

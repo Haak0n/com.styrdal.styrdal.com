@@ -27,7 +27,7 @@ else
 }
 
 $sqlitecon = new SQLIte3("database/restauranger.db");
-$sqlitesql = "SELECT name, address, number, url, extra FROM restaurants WHERE idname = '". $idname ."'";
+$sqlitesql = "SELECT name, address, number, url, extra, daily, standard FROM restaurants WHERE idname = '". $idname ."'";
 $sqlresult = $sqlitecon->query($sqlitesql);
 
 $inforow = $sqlresult->fetchArray(SQLITE3_ASSOC);
@@ -42,7 +42,27 @@ echo "<form action='../index.php?p=admin&s=info' method='post'>
 	Hemsida<br />
 	<input class='input5' type='text' name='iurl' value='" . $inforow["url"] . "' /></p><p>
 	Info<br />
-	<textarea class='input3' name='iextra'>" . $inforow["extra"] . "</textarea></p><p>
+	<textarea class='input3' name='iextra'>" . $inforow["extra"] . "</textarea></p><p>";
+if($inforow["standard"] == "true")
+{
+	echo "<input type='checkbox' name='istandard' value='true' checked/>";
+}
+else
+{
+	echo "<input type='checkbox' name='istandard' value='true' />";
+}
+echo "Har fast meny</p><p>";
+
+if($inforow["daily"] == "true")
+{
+	echo "<input type='checkbox' name='idaily' value='true' checked />";
+}
+else
+{
+	echo "<input type='checkbox' name='idaily' value='true' />";
+}
+
+echo "Har dagens</p><p>
 	<input class='input2' type='submit' value='Ändra' />
 	<input type='hidden' name='idname' value='". $idname ."' />
 	</form>
