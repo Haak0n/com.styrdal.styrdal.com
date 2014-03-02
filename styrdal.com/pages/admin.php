@@ -24,6 +24,7 @@
 			include("addnews.php");
 		}
 		
+		
 		//Ändra Dagensmeny
 		elseif(isset($_GET['s']) && $_GET['s'] == "daily" && ($lvl == 2 || $lvl == 3 || $lvl == 4))
 		{
@@ -53,6 +54,12 @@
 		elseif(isset($_GET['s']) && $_GET['s'] == "meny" && ($lvl == 2 || $lvl == 3 || $lvl == 4))
 		{
 			include("editmenu.php");
+		}
+		
+		//Ändra inställningar
+		elseif(isset($_GET['s']) && $_GET['s'] == "edit" && $lvl > 0)
+		{
+			include("edituser.php");
 		}
 			
 		else {
