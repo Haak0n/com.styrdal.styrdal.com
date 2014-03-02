@@ -7,6 +7,7 @@ include("functions/adddaily.php");
 include("functions/editinfo.php");
 include("functions/edittimes.php");
 include("functions/editmenu.php");
+include("functions/edituser.php");
 
 if (isset($_GET["p"]) == true)
 {
