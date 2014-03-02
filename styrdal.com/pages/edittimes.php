@@ -146,7 +146,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='tuesdayopenminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 	{
 		if($i == $tuesdayopenminute)
 	{
@@ -174,7 +174,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='tuesdaycloseminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 	{
 		if($i == $tuesdaycloseminute)
 	{
@@ -208,7 +208,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='wednesdayopenminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $wednesdayopenminute)
 	{
@@ -236,7 +236,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='wednesdaycloseminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $wednesdaycloseminute)
 	{
@@ -268,7 +268,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='thursdayopenminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $thursdayopenminute)
 	{
@@ -296,7 +296,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='thursdaycloseminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $thursdaycloseminute)
 	{
@@ -329,7 +329,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='fridayopenminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $fridayopenminute)
 	{
@@ -357,7 +357,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='fridaycloseminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $fridaycloseminute)
 	{
@@ -389,7 +389,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='saturdayopenminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $saturdayopenminute)
 	{
@@ -417,7 +417,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='saturdaycloseminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $saturdaycloseminute)
 	{
@@ -450,7 +450,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='sundayopenminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $sundayopenminute)
 	{
@@ -478,7 +478,7 @@ for($i = "00"; $i < 24; $i++)
 
 echo "</select>:<select name='sundaycloseminute'>
 	<option selected value='Stängt'>Stängt</option>";
-for($i = "00"; $i < 60; $i++)
+for($i = "00"; $i < 60; $i = $i + 5)
 {
 	if($i == $sundaycloseminute)
 	{
