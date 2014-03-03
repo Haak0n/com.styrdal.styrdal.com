@@ -349,21 +349,21 @@ function edittimes()
 		$idname = $_POST["idname"];
 		
 		$timessql = "UPDATE restaurants SET 
-			monday_open = '" . $mondayopen . "', 
-			monday_close='" . $mondayclose . "', 
-			tuesday_open='" . $tuesdayopen . "', 
-			tuesday_close='" . $tuesdayclose . "', 
-			wednesday_open='" . $wednesdayopen . "', 
-			wednesday_close='" . $wednesdayclose . "',
-			thursday_open='" . $thursdayopen . "', 
-			thursday_close='" . $thursdayclose . "', 
-			friday_open='" . $fridayopen . "', 
-			friday_close='" . $fridayclose . "', 
-			saturday_open='" . $saturdayopen . "', 
-			saturday_close='" . $saturdayclose . "', 
-			sunday_open='" . $sundayopen . "', 
-			sunday_close='" . $sundayclose . "'
-			WHERE idname = '" . $idname . "'";
+			monday_open = '" . utf8_encode($mondayopen) . "', 
+			monday_close='" . utf8_encode($mondayclose) . "', 
+			tuesday_open='" . utf8_encode($tuesdayopen) . "', 
+			tuesday_close='" . utf8_encode($tuesdayclose) . "', 
+			wednesday_open='" . utf8_encode($wednesdayopen) . "', 
+			wednesday_close='" . utf8_encode($wednesdayclose) . "',
+			thursday_open='" . utf8_encode($thursdayopen) . "', 
+			thursday_close='" . utf8_encode($thursdayclose) . "', 
+			friday_open='" . utf8_encode($fridayopen) . "', 
+			friday_close='" . utf8_encode($fridayclose) . "', 
+			saturday_open='" . utf8_encode($saturdayopen) . "', 
+			saturday_close='" . utf8_encode($saturdayclose) . "', 
+			sunday_open='" . utf8_encode($sundayopen) . "', 
+			sunday_close='" . utf8_encode($sundayclose) . "'
+			WHERE idname = '" . utf8_encode($idname) . "'";
 		
 		$sqlitecon->query($timessql);
 		

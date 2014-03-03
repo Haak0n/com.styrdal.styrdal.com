@@ -4,10 +4,10 @@ function editinfo()
 	$sqlitecon = new SQLIte3("database/restauranger.db");
 	if(isset($_POST["iname"]) || isset($_POST["iaddress"]) || isset($_POST["inumber"]) || isset($_POST["iurl"]) || isset($_POST["iextra"]))
 	{
-		$name = $_POST["iname"];
-		$address = $_POST["iaddress"];
-		$number = $_POST["inumber"];
-		$url = $_POST["iurl"];
+		$name = utf8_encode($_POST["iname"]);
+		$address = utf8_encode($_POST["iaddress"]);
+		$number = utf8_encode($_POST["inumber"]);
+		$url = utf8_encode($_POST["iurl"]);
 		$urlarray = parse_url($url);
 		if(!isset($urlarray["scheme"]))
 		{
@@ -32,8 +32,8 @@ function editinfo()
 		}
 		
 		
-		$extra = $_POST["iextra"];
-		$idname = $_POST["idname"];
+		$extra = utf8_encode($_POST["iextra"]);
+		$idname = utf8_encode($_POST["idname"]);
 		
 		$infosql = "UPDATE restaurants SET 
 			name = '" . $name ."', 
