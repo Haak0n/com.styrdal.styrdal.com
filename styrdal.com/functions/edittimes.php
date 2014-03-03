@@ -14,7 +14,7 @@ function edittimes()
 		}
 		else
 		{
-			if($_POST["mondayopenhour"] < 10)
+			if(0 < $_POST["mondayopenhour"] && $_POST["mondayopenhour"] < 10)
 			{
 				$mondayopenhour = "0" . $_POST["mondayopenhour"];
 			}
@@ -23,7 +23,7 @@ function edittimes()
 				$mondayopenhour = $_POST["mondayopenhour"];
 			}
 			
-			if($_POST["mondayopenminute"] < 10)
+			if(0 < $_POST["mondayopenminute"] && $_POST["mondayopenminute"] < 10)
 			{
 				$mondayopenminute = "0" . $_POST["mondayopenminute"];
 			}
@@ -32,7 +32,7 @@ function edittimes()
 				$mondayopenminute = $_POST["mondayopenminute"];
 			}
 			
-			if($_POST["mondayclosehour"] < 10)
+			if(0 < $_POST["mondayclosehour"] && $_POST["mondayclosehour"] < 10)
 			{
 				$mondayclosehour = "0" . $_POST["mondayclosehour"];
 			}
@@ -41,7 +41,7 @@ function edittimes()
 				$mondayclosehour = $_POST["mondayclosehour"];
 			}
 			
-			if($_POST["mondaycloseminute"] < 10)
+			if(0 < $_POST["mondaycloseminute"] && $_POST["mondaycloseminute"] < 10)
 			{
 				$mondaycloseminute = "0" . $_POST["mondaycloseminute"];
 			}
@@ -62,7 +62,7 @@ function edittimes()
 		}
 		else
 		{
-			if($_POST["tuesdayopenhour"] < 10)
+			if(0 < $_POST["tuesdayopenhour"] && $_POST["tuesdayopenhour"] < 10)
 			{
 				$tuesdayopenhour = "0" . $_POST["tuesdayopenhour"];
 			}
@@ -71,7 +71,7 @@ function edittimes()
 				$tuesdayopenhour = $_POST["tuesdayopenhour"];
 			}
 		
-			if($_POST["tuesdayopenminute"] < 10)
+			if(0 < $_POST["tuesdayopenminute"] && $_POST["tuesdayopenminute"] < 10)
 			{
 				$tuesdayopenminute = "0" . $_POST["tuesdayopenminute"];
 			}
@@ -80,7 +80,7 @@ function edittimes()
 				$tuesdayopenminute = $_POST["tuesdayopenminute"];
 			}
 		
-			if($_POST["tuesdayclosehour"] < 10)
+			if(0 < $_POST["tuesdayclosehour"] && $_POST["tuesdayclosehour"] < 10)
 			{
 				$tuesdayclosehour = "0" . $_POST["tuesdayclosehour"];
 			}
@@ -89,7 +89,7 @@ function edittimes()
 				$tuesdayclosehour = $_POST["tuesdayclosehour"];
 			}
 		
-			if($_POST["tuesdaycloseminute"] < 10)
+			if(0 < $_POST["tuesdaycloseminute"] && $_POST["tuesdaycloseminute"] < 10)
 			{
 				$tuesdaycloseminute = "0" . $_POST["tuesdaycloseminute"];
 			}
@@ -111,7 +111,7 @@ function edittimes()
 		}
 		else
 		{
-			if($_POST["wednesdayopenhour"] < 10)
+			if(0 < $_POST["wednesdayopenhour"] && $_POST["wednesdayopenhour"] < 10)
 			{
 				$wednesdayopenhour = "0" . $_POST["wednesdayopenhour"];
 			}
@@ -120,7 +120,7 @@ function edittimes()
 				$wednesdayopenhour = $_POST["wednesdayopenhour"];
 			}
 		
-			if($_POST["wednesdayopenminute"] < 10)
+			if(0 < $_POST["wednesdayopenminute"] && $_POST["wednesdayopenminute"] < 10)
 			{
 				$wednesdayopenminute = "0" . $_POST["wednesdayopenminute"];
 			}
@@ -129,7 +129,7 @@ function edittimes()
 				$wednesdayopenminute = $_POST["wednesdayopenminute"];
 			}
 		
-			if($_POST["wednesdayclosehour"] < 10)
+			if(0 < $_POST["wednesdayclosehour"] && $_POST["wednesdayclosehour"] < 10)
 			{
 				$wednesdayclosehour = "0" . $_POST["wednesdayclosehour"];
 			}
@@ -138,7 +138,7 @@ function edittimes()
 				$wednesdayclosehour = $_POST["wednesdayclosehour"];
 			}
 		
-			if($_POST["wednesdaycloseminute"] < 10)
+			if(0 < $_POST["wednesdaycloseminute"] && $_POST["wednesdaycloseminute"] < 10)
 			{
 				$wednesdaycloseminute = "0" . $_POST["wednesdaycloseminute"];
 			}
@@ -159,7 +159,7 @@ function edittimes()
 		}
 		else
 		{
-			if($_POST["thursdayopenhour"] < 10)
+			if(0 < $_POST["thursdayopenhour"] && $_POST["thursdayopenhour"] < 10)
 			{
 				$thursdayopenhour = "0" . $_POST["thursdayopenhour"];
 			}
@@ -168,7 +168,7 @@ function edittimes()
 				$thursdayopenhour = $_POST["thursdayopenhour"];
 			}
 		
-			if($_POST["thursdayopenminute"] < 10)
+			if(0 < $_POST["thursdayopenminute"] && $_POST["thursdayopenminute"] < 10)
 			{
 				$thursdayopenminute = "0" . $_POST["thursdayopenminute"];
 			}
@@ -177,7 +177,7 @@ function edittimes()
 				$thursdayopenminute = $_POST["thursdayopenminute"];
 			}
 		
-			if($_POST["thursdayclosehour"] < 10)
+			if(0 < $_POST["thursdayclosehour"] && $_POST["thursdayclosehour"] < 10)
 			{
 				$thursdayclosehour = "0" . $_POST["thursdayclosehour"];
 			}
@@ -186,7 +186,7 @@ function edittimes()
 				$thursdayclosehour = $_POST["thursdayclosehour"];
 			}
 		
-			if($_POST["thursdaycloseminute"] < 10)
+			if(0 < $_POST["thursdaycloseminute"] && $_POST["thursdaycloseminute"] < 10)
 			{
 				$thursdaycloseminute = "0" . $_POST["thursdaycloseminute"];
 			}
@@ -208,7 +208,7 @@ function edittimes()
 		}
 		else
 		{
-			if($_POST["fridayopenhour"] < 10)
+			if(0 < $_POST["fridayopenhour"] && $_POST["fridayopenhour"] < 10)
 			{
 				$fridayopenhour = "0" . $_POST["fridayopenhour"];
 			}
@@ -217,7 +217,7 @@ function edittimes()
 				$fridayopenhour = $_POST["fridayopenhour"];
 			}
 		
-			if($_POST["fridayopenminute"] < 10)
+			if(0 < $_POST["fridayopenminute"] && $_POST["fridayopenminute"] < 10)
 			{
 				$fridayopenminute = "0" . $_POST["fridayopenminute"];
 			}
@@ -226,7 +226,7 @@ function edittimes()
 				$fridayopenminute = $_POST["fridayopenminute"];
 			}
 		
-			if($_POST["fridayclosehour"] < 10)
+			if(0 < $_POST["fridayclosehour"] && $_POST["fridayclosehour"] < 10)
 			{
 				$fridayclosehour = "0" . $_POST["fridayclosehour"];
 			}
@@ -235,7 +235,7 @@ function edittimes()
 				$fridayclosehour = $_POST["fridayclosehour"];
 			}
 		
-			if($_POST["fridaycloseminute"] < 10)
+			if(0 < $_POST["fridaycloseminute"] && $_POST["fridaycloseminute"] < 10)
 			{
 				$fridaycloseminute = "0" . $_POST["fridaycloseminute"];
 			}
@@ -257,7 +257,7 @@ function edittimes()
 		}
 		else
 		{
-			if($_POST["saturdayopenhour"] < 10)
+			if(0 < $_POST["saturdayopenhour"] && $_POST["saturdayopenhour"] < 10)
 			{
 				$saturdayopenhour = "0" . $_POST["saturdayopenhour"];
 			}
@@ -266,7 +266,7 @@ function edittimes()
 				$saturdayopenhour = $_POST["saturdayopenhour"];
 			}
 		
-			if($_POST["saturdayopenminute"] < 10)
+			if(0 < $_POST["saturdayopenminute"] && $_POST["saturdayopenminute"] < 10)
 			{
 				$saturdayopenminute = "0" . $_POST["saturdayopenminute"];
 			}
@@ -275,7 +275,7 @@ function edittimes()
 				$saturdayopenminute = $_POST["saturdayopenminute"];
 			}
 		
-			if($_POST["saturdayclosehour"] < 10)
+			if(0 < $_POST["saturdayclosehour"] && $_POST["saturdayclosehour"] < 10)
 			{
 				$saturdayclosehour = "0" . $_POST["saturdayclosehour"];
 			}
@@ -284,7 +284,7 @@ function edittimes()
 				$saturdayclosehour = $_POST["saturdayclosehour"];
 			}
 		
-			if($_POST["saturdaycloseminute"] < 10)
+			if(0 < $_POST["saturdaycloseminute"] && $_POST["saturdaycloseminute"] < 10)
 			{
 				$saturdaycloseminute = "0" . $_POST["saturdaycloseminute"];
 			}
@@ -306,7 +306,7 @@ function edittimes()
 		}
 		else
 		{
-			if($_POST["sundayopenhour"] < 10)
+			if(0 < $_POST["sundayopenhour"] && $_POST["sundayopenhour"] < 10)
 			{
 				$sundayopenhour = "0" . $_POST["sundayopenhour"];
 			}
@@ -315,7 +315,7 @@ function edittimes()
 				$sundayopenhour = $_POST["sundayopenhour"];
 			}
 		
-			if($_POST["sundayopenminute"] < 10)
+			if(0 < $_POST["sundayopenminute"] && $_POST["sundayopenminute"] < 10)
 			{
 				$sundayopenminute = "0" . $_POST["sundayopenminute"];
 			}
@@ -324,7 +324,7 @@ function edittimes()
 				$sundayopenminute = $_POST["sundayopenminute"];
 			}
 		
-			if($_POST["sundayclosehour"] < 10)
+			if(0 < $_POST["sundayclosehour"] && $_POST["sundayclosehour"] < 10)
 			{
 				$sundayclosehour = "0" . $_POST["sundayclosehour"];
 			}
@@ -333,7 +333,7 @@ function edittimes()
 				$sundayclosehour = $_POST["sundayclosehour"];
 			}
 		
-			if($_POST["sundaycloseminute"] < 10)
+			if(0 < $_POST["sundaycloseminute"] && $_POST["sundaycloseminute"] < 10)
 			{
 				$sundaycloseminute = "0" . $_POST["sundaycloseminute"];
 			}
