@@ -17,13 +17,13 @@ else
 	}
 	else
 	{
-		$idname = null;
+		$idname = "valje";
 	}
 	echo "<form action='../index.php?p=admin&s=meny' method='post'>
 		idname<br />
 		<input class='input4' list='weeks' name='idname' value='" . $idname . "' /><br /></p><p>
 		<input class='input2' type='submit' value='Visa' />
-		</form><hr />";
+		</form><hr /><br />";
 }
 
 if(isset($_POST["itemid"]))
@@ -46,11 +46,11 @@ while($itemrow = $sqliteresult->fetchArray(SQLITE3_ASSOC))
 {
 	if($itemrow["_id"] == $itemid)
 	{
-		echo "<option selected value='" . $itemrow["_id"] . "'>" . $itemrow["number"] . ". " . $itemrow["name"] . "</option>";
+		echo "<option selected value='" . $itemrow["_id"] . "'>" . $itemrow["number"] . ". " . utf8_decode($itemrow["name"]) . "</option>";
 	}
 	else
 	{
-		echo "<option value='" . $itemrow["_id"] . "'>" . $itemrow["number"] . ". " . $itemrow["name"] . "</option>";
+		echo "<option value='" . $itemrow["_id"] . "'>" . $itemrow["number"] . ". " . utf8_decode($itemrow["name"]) . "</option>";
 	}
 }
 echo "</select> <input type='hidden' name='idname' value='". $idname ."' /><input class='input2' type='submit' value='Välj' />
@@ -67,17 +67,17 @@ if(isset($_POST["itemid"]))
 	echo "</p><p>
 		<form action='../index.php?p=admin&s=meny' method='post'>
 		Nummer <br />
-		<input type='text' class='input5' name='mnumber' value='" . $item["number"] . "' /></p><p>
+		<input type='text' class='input5' name='mnumber' value='" . utf8_decode($item["number"]) . "' /></p><p>
 		Namn <br />
-		<input type='text' class='input5' name='mname' value='" . $item["name"] . "' /></p><p>
+		<input type='text' class='input5' name='mname' value='" . utf8_decode($item["name"]) . "' /></p><p>
 		Pålägg <br />
-		<input type='text' class='input5' name='mtoppings' value='" . $item["toppings"] . "' /></p><p>
+		<input type='text' class='input5' name='mtoppings' value='" . utf8_decode($item["toppings"]) . "' /></p><p>
 		Extra Info <br />
-		<input type='text' class='input5' name='mextra' value='" . $item["extra"] . "' /></p><p>
+		<input type='text' class='input5' name='mextra' value='" . utf8_decode($item["extra"]) . "' /></p><p>
 		Pris <br />
-		<input type='text' class='input5' name='mprice' value='" . $item["price"] . "' /></p><p>
+		<input type='text' class='input5' name='mprice' value='" . utf8_decode($item["price"]) . "' /></p><p>
 		Alternativt Pris <br />
-		<input type='text' class='input5' name='maltprice' value='" . $item["altprice"] . "' /></p><p>
+		<input type='text' class='input5' name='maltprice' value='" . utf8_decode($item["altprice"]) . "' /></p><p>
 		<input class='input2' type='submit' value='Ändra' />
 		<input type='hidden' name='idname' value='". $idname ."' />
 		<input type='hidden' name='itemid' value='". $item["_id"] ."' />

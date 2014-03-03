@@ -34,15 +34,15 @@ $inforow = $sqlresult->fetchArray(SQLITE3_ASSOC);
 
 echo "<form action='../index.php?p=admin&s=info' method='post'>
 	Namn<br />
-	<input class='input5' type='text' name='iname' value='" . $inforow["name"] . "' /></p><p>
+	<input class='input5' type='text' name='iname' value='" . utf8_decode($inforow["name"]) . "' /></p><p>
 	Adress<br />
-	<input class='input5' type='text' name='iaddress' value='" . $inforow["address"] . "' /></p><p>
+	<input class='input5' type='text' name='iaddress' value='" . utf8_decode($inforow["address"]) . "' /></p><p>
 	Telefon<br />
-	<input class='input5' type='text' name='inumber' value='" . $inforow["number"] . "' /></p><p>
+	<input class='input5' type='text' name='inumber' value='" . utf8_decode($inforow["number"]) . "' /></p><p>
 	Hemsida<br />
-	<input class='input5' type='text' name='iurl' value='" . $inforow["url"] . "' /></p><p>
+	<input class='input5' type='text' name='iurl' value='" . utf8_decode($inforow["url"]) . "' /></p><p>
 	Info<br />
-	<textarea class='input3' name='iextra'>" . $inforow["extra"] . "</textarea></p><p>";
+	<textarea class='input3' name='iextra'>" . utf8_decode($inforow["extra"]) . "</textarea></p><p>";
 if($inforow["standard"] == "true")
 {
 	echo "<input type='checkbox' name='istandard' value='true' checked/>";

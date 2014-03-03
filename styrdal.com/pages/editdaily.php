@@ -84,19 +84,19 @@ while($sqliterow = $sqlresult->fetchArray(SQLITE3_ASSOC))
 	
 echo "<form action='../index.php?p=admin&s=daily' method='post'>
 	Måndag<br />
-	<input class='input1' type='text' name='d1' value='". $dailytext[1] ."' /></p><p>
+	<input class='input1' type='text' name='d1' value='". utf8_decode($dailytext[1]) ."' /></p><p>
 	Tisdag<br />
-	<input class='input1' type='text' name='d2' value='". $dailytext[2] ."' /></p><p>
+	<input class='input1' type='text' name='d2' value='". utf8_decode($dailytext[2]) ."' /></p><p>
 	Onsdag<br />
-	<input class='input1' type='text' name='d3' value='". $dailytext[3] ."' /></p><p>
+	<input class='input1' type='text' name='d3' value='". utf8_decode($dailytext[3]) ."' /></p><p>
 	Torsdag<br />
-	<input class='input1' type='text' name='d4' value='". $dailytext[4] ."' /></p><p>
+	<input class='input1' type='text' name='d4' value='". utf8_decode($dailytext[4]) ."' /></p><p>
 	Fredag<br />
-	<input class='input1' type='text' name='d5' value='". $dailytext[5] ."' /></p><p>
+	<input class='input1' type='text' name='d5' value='". utf8_decode($dailytext[5]) ."' /></p><p>
 	Lördag<br />
-	<input class='input1' type='text' name='d6' value='". $dailytext[6] ."' /></p><p>
+	<input class='input1' type='text' name='d6' value='". utf8_decode($dailytext[6]) ."' /></p><p>
 	Söndag<br />
-	<input class='input1' type='text' name='d7' value='". $dailytext[7] ."' /></p><p>
+	<input class='input1' type='text' name='d7' value='". utf8_decode($dailytext[7]) ."' /></p><p>
 	<input class='input2' type='submit' value='Lägg Till' /></p><br />
 	<input type='hidden' name='idname' value='". $idname ."' /><input type='hidden' name='week' value='". $week ."' />
 				
