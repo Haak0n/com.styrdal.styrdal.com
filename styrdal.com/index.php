@@ -8,6 +8,7 @@ include("functions/editinfo.php");
 include("functions/edittimes.php");
 include("functions/editmenu.php");
 include("functions/edituser.php");
+include("functions/addrestaurant.php");
 
 if (isset($_GET["p"]) == true)
 {

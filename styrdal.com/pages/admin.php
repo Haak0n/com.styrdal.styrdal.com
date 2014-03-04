@@ -38,6 +38,12 @@
 			include("adduser.php");
 		}
 		
+		/* Lägg till restaurang */
+		elseif(isset($_GET['s']) && $_GET['s'] == "addrestaurant" && ($lvl == 4))
+		{
+			include("addrestaurant.php");
+		}
+		
 		//Ändra restauranginfo
 		elseif(isset($_GET['s']) && $_GET['s'] == "info" && ($lvl == 2 || $lvl == 3 || $lvl == 4))
 		{
