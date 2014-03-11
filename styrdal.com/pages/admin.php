@@ -44,6 +44,12 @@
 			include("addrestaurant.php");
 		}
 		
+		/* Ta bort till restaurang */
+		elseif(isset($_GET['s']) && $_GET['s'] == "remrestaurant" && ($lvl == 4))
+		{
+			include("remrestaurant.php");
+		}
+		
 		//Ändra restauranginfo
 		elseif(isset($_GET['s']) && $_GET['s'] == "info" && ($lvl == 2 || $lvl == 3 || $lvl == 4))
 		{
@@ -104,6 +110,7 @@
 		if($lvl == 4)
 		{
 			echo "<a href='../index.php?p=admin&s=addrestaurant'>Lägg till Restaurang</a><br />
+				<a href='../index.php?p=admin&s=remrestaurant'>Ta bort restaurang</a><br />
 				<a href='../index.php?p=admin&s=adduser'>Lägg till Användare</a><p />";
 		}
 		echo "</div>";

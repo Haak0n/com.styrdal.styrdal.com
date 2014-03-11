@@ -46,7 +46,7 @@ function addrestaurant()
 		}
 		
 		$sqlitecon = new SQLIte3("database/restauranger.db");
-		$addsql = "INSERT INTO restaurants (name, address, number, url, extra, idname, standard, daily) VALUES ('" . $addname . "', '" . $addaddress . "', '" . $addnumber . "', '" . $addurl . "', '" . $addextra . "', '" . $addidname . "', '" . $addstandard . "', '" . $adddaily . "')";
+		$addsql = "INSERT INTO restaurants (name, address, number, url, extra, idname, standard, daily, monday_open, tuesday_open, wednesday_open, thursday_open, friday_open, saturday_open, sunday_open, monday_close, tuesday_close, wednesday_close, thursday_close, friday_close, saturday_close, sunday_close) VALUES ('" . $addname . "', '" . $addaddress . "', '" . $addnumber . "', '" . $addurl . "', '" . $addextra . "', '" . $addidname . "', '" . $addstandard . "', '" . $adddaily . "', '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '00:00')";
 		$sqlitecon->query($addsql);
 		
 		$addtablesql = "CREATE TABLE " . $addidname . " ("
@@ -58,6 +58,7 @@ function addrestaurant()
 				. "price INTEGER, "
 				. "altprice INTEGER)";
 		$sqlitecon->query($addtablesql);
+		updateVersion($sqlitecon);
 		echo "Restaurang tillagd!";
 	}
 }

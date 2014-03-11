@@ -14,6 +14,8 @@ function adddaily()
 		
 		$d1sql2 = "INSERT INTO daily (idname, day, week, text) VALUES ('" . $idname . "', '1', '" . $week ."', '" . $text . "')";
 		$sqlitecon->query($d1sql2);
+		
+		updateVersion($sqlitecon);
 	}
 	
 	if(isset($_POST['d2']))
@@ -28,6 +30,8 @@ function adddaily()
 	
 		$d2sql2 = "INSERT INTO daily (idname, day, week, text) VALUES ('" . $idname . "', '2', '" . $week ."', '" . $text . "')";
 		$sqlitecon->query($d2sql2);
+		
+		updateVersion($sqlitecon);
 	}
 	
 	if(isset($_POST['d3']))
@@ -42,6 +46,8 @@ function adddaily()
 	
 		$d3sql2 = "INSERT INTO daily (idname, day, week, text) VALUES ('" . $idname . "', '3', '" . $week ."', '" . $text . "')";
 		$sqlitecon->query($d3sql2);
+		
+		updateVersion($sqlitecon);
 	}
 	
 	if(isset($_POST['d4']))
@@ -56,6 +62,8 @@ function adddaily()
 	
 		$d4sql2 = "INSERT INTO daily (idname, day, week, text) VALUES ('" . $idname . "', '4', '" . $week ."', '" . $text . "')";
 		$sqlitecon->query($d4sql2);
+		
+		updateVersion($sqlitecon);
 	}
 	
 	if(isset($_POST['d4']))
@@ -70,6 +78,8 @@ function adddaily()
 	
 		$d4sql2 = "INSERT INTO daily (idname, day, week, text) VALUES ('" . $idname . "', '4', '" . $week ."', '" . $text . "')";
 		$sqlitecon->query($d4sql2);
+		
+		updateVersion($sqlitecon);
 	}
 	
 	if(isset($_POST['d5']))
@@ -84,6 +94,8 @@ function adddaily()
 	
 		$d5sql2 = "INSERT INTO daily (idname, day, week, text) VALUES ('" . $idname . "', '5', '" . $week ."', '" . $text . "')";
 		$sqlitecon->query($d5sql2);
+		
+		updateVersion($sqlitecon);
 	}
 	
 	if(isset($_POST['d6']))
@@ -98,6 +110,8 @@ function adddaily()
 	
 		$d6sql2 = "INSERT INTO daily (idname, day, week, text) VALUES ('" . $idname . "', '6', '" . $week ."', '" . $text . "')";
 		$sqlitecon->query($d6sql2);
+		
+		updateVersion($sqlitecon);
 	}
 	
 	if(isset($_POST['d7']))
@@ -112,6 +126,8 @@ function adddaily()
 	
 		$d7sql2 = "INSERT INTO daily (idname, day, week, text) VALUES ('" . $idname . "', '7', '" . $week ."', '" . $text . "')";
 		$sqlitecon->query($d7sql2);
+		
+		updateVersion($sqlitecon);
 	}
 
 }

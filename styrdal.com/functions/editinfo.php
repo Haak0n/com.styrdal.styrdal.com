@@ -45,6 +45,7 @@ function editinfo()
 			daily = '" . $daily . "'
 			WHERE idname = '" . $idname . "'";
 		$inforesult = $sqlitecon->query($infosql);
+		updateVersion($sqlitecon);
 		echo "Information uppdaterad!<br />";
 	}
 }

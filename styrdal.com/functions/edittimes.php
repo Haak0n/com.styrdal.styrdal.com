@@ -366,6 +366,7 @@ function edittimes()
 			WHERE idname = '" . utf8_encode($idname) . "'";
 		
 		$sqlitecon->query($timessql);
+		updateVersion($sqlitecon);
 		
 		echo "Öppettider uppdaterade!";
 	}

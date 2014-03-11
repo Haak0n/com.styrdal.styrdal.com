@@ -22,6 +22,7 @@ function editmenu()
 			altprice='" . $altprice . "'
 			WHERE _id='" . $id . "'";
 		$sqlitecon->query($updatesql);
+		updateVersion($sqlitecon);
 		
 		echo $name . " uppdaterad!";
 	}
