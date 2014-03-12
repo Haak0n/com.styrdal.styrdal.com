@@ -75,28 +75,54 @@ for ($i = 1; $i < 8; $i++)
 }
 	
 $i = 1;
-while($sqliterow = $sqlresult->fetchArray(SQLITE3_ASSOC))
+while ($i < 8)	
 {
-	$dailytext[$i] = $sqliterow["text"];
-	$i++;
+	if($sqliterow = $sqlresult->fetchArray(SQLITE3_ASSOC))
+	{
+		$dailytext[$i] = $sqliterow["text"];
+		$dailytextsplit = explode("\\n", $dailytext[$i]);
+		$dailyrowone[$i] = $dailytextsplit[0];
+		if(isset($dailytextsplit[1]))
+		{
+			$dailyrowtwo[$i] = $dailytextsplit[1];
+		}
+		else 
+		{
+			$dailyrowtwo[$i] = null;
+		}
+		$i++;
+	}
+	else
+	{
+		$dailyrowone[$i] = null;
+		$dailyrowtwo[$i] = null;
+		$i++;
+	}
 }
 
 	
 echo "<form action='../index.php?p=admin&s=daily' method='post'>
 	Måndag<br />
-	<input class='input1' type='text' name='d1' value='". utf8_decode($dailytext[1]) ."' /></p><p>
+	<input class='input5' type='text' name='d11' value='". utf8_decode($dailyrowone[1]) ."' /></p><p>
+	<input class='input5' type='text' name='d12' value='". utf8_decode($dailyrowtwo[1]) ."' /></p><p>
 	Tisdag<br />
-	<input class='input1' type='text' name='d2' value='". utf8_decode($dailytext[2]) ."' /></p><p>
+	<input class='input5' type='text' name='d21' value='". utf8_decode($dailyrowone[2]) ."' /></p><p>
+	<input class='input5' type='text' name='d22' value='". utf8_decode($dailyrowtwo[2]) ."' /></p><p>
 	Onsdag<br />
-	<input class='input1' type='text' name='d3' value='". utf8_decode($dailytext[3]) ."' /></p><p>
+	<input class='input5' type='text' name='d31' value='". utf8_decode($dailyrowone[3]) ."' /></p><p>
+	<input class='input5' type='text' name='d32' value='". utf8_decode($dailyrowtwo[3]) ."' /></p><p>
 	Torsdag<br />
-	<input class='input1' type='text' name='d4' value='". utf8_decode($dailytext[4]) ."' /></p><p>
+	<input class='input5' type='text' name='d41' value='". utf8_decode($dailyrowone[4]) ."' /></p><p>
+	<input class='input5' type='text' name='d42' value='". utf8_decode($dailyrowtwo[4]) ."' /></p><p>
 	Fredag<br />
-	<input class='input1' type='text' name='d5' value='". utf8_decode($dailytext[5]) ."' /></p><p>
+	<input class='input5' type='text' name='d51' value='". utf8_decode($dailyrowone[5]) ."' /></p><p>
+	<input class='input5' type='text' name='d52' value='". utf8_decode($dailyrowtwo[5]) ."' /></p><p>
 	Lördag<br />
-	<input class='input1' type='text' name='d6' value='". utf8_decode($dailytext[6]) ."' /></p><p>
+	<input class='input5' type='text' name='d61' value='". utf8_decode($dailyrowone[6]) ."' /></p><p>
+	<input class='input5' type='text' name='d62' value='". utf8_decode($dailyrowtwo[6]) ."' /></p><p>
 	Söndag<br />
-	<input class='input1' type='text' name='d7' value='". utf8_decode($dailytext[7]) ."' /></p><p>
+	<input class='input5' type='text' name='d71' value='". utf8_decode($dailyrowone[7]) ."' /></p><p>
+	<input class='input5' type='text' name='d72' value='". utf8_decode($dailyrowtwo[7]) ."' /></p><p>
 	<input class='input2' type='submit' value='Lägg Till' /></p><br />
 	<input type='hidden' name='idname' value='". $idname ."' /><input type='hidden' name='week' value='". $week ."' />
 				
